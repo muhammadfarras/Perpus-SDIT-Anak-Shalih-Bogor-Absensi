@@ -9,6 +9,8 @@ module com.farras.sdit.perpussditanakshalihbogorabsensi {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires dpjavapos;
+    requires dpuareu;
 
     opens com.farras.sdit.perpussditanakshalihbogorabsensi to javafx.fxml;
     exports com.farras.sdit.perpussditanakshalihbogorabsensi;
