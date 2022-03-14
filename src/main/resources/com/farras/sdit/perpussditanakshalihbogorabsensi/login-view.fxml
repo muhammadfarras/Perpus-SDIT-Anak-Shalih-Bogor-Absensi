@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefHeight="600.0" prefWidth="600.0" stylesheets="@../../../../style/login-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.LoginController">
+    <HBox prefHeight="100.0" prefWidth="600.0" style="-fx-background-color:#fffafa">
+        <VBox fx:id="hroot" prefWidth="300">
+
+            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.9}" prefWidth="100">
+
+                <styleClass>
+                    <String fx:value="border-right-top-radius" />
+                    <String fx:value="border-right-bottom-radius" />
+                </styleClass>
+
+                <padding>
+                    <Insets left="10" />
+                </padding>
+                <Label fx:id="vbox_front" text="|OURBRY">
+                    <font>
+                        <Font size="56.0" />
+                    </font>
+                </Label>
+                <Label fx:id="app_version" text="Our Library, version 1.0" textFill="dimgray">
+                    <font>
+                        <Font size="10" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.1}">
+                <padding>
+                    <Insets left="30">
+
+                    </Insets>
+                </padding>
+                <Label fx:id="my_credit" text="Dikembangkan Oleh : Muhammad Farras Ma'ruf">
+                   <font>
+                      <Font name="System Italic" size="9.0" />
+                   </font>
+                </Label>
+                <Label text="Perpustakaan SDIT Anak Shalih Bogor" textFill="#08983a">
+                    <font>
+                        <Font name="System Bold Italic" size="9.0" />
+                    </font>
+                </Label>
+            </VBox>
+        </VBox>
+
+
+        <VBox fx:id="form_login" prefWidth="300" prefHeight="${hroot.height*0.9}">
+            <padding>
+                <Insets bottom="30" top="30" left="20" right="20"/>
+            </padding>
+
+            <VBox prefHeight="${form_login.height*0.9}" styleClass="pane-login-form"  spacing="25" alignment="CENTER">
+                <padding>
+                    <Insets left="20" right="20"/>
+                </padding>
+
+                <Label text="Login" textFill="#ffffff">
+                    <font>
+                        <Font size="30"/>
+                    </font>
+                </Label>
+
+                <TextField fx:id="textUName" styleClass="text-field" promptText="Username"/>
+                <PasswordField fx:id="textPasswd" styleClass="text-field" promptText="Password"/>
+            </VBox>
+
+            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.1}"/>
+
+
+        </VBox>
+    </HBox>
+
+
+</StackPane>
