@@ -113,7 +113,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.farras.sdit.perpussditanakshalihbogorabsensi/com.farras.sdit.perpussditanakshalihbogorabsensi.MainApplication
+                                com.farras.sdit.perpussditanakshalihbogorabsensi/com.farras.sdit.perpussditanakshalihbogorabsensi.LoginApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

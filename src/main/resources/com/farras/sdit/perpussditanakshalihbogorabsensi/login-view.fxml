@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import impl.org.controlsfx.skin.DecorationPane?>
 <StackPane prefHeight="600.0" prefWidth="600.0" stylesheets="@../../../../style/login-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.LoginController">
     <HBox prefHeight="100.0" prefWidth="600.0" style="-fx-background-color:#fffafa">
         <VBox fx:id="hroot" prefWidth="300">
@@ -52,27 +53,50 @@
         </VBox>
 
 
-        <VBox fx:id="form_login" prefWidth="300" prefHeight="${hroot.height*0.9}">
+        <VBox fx:id="form_login" prefHeight="${hroot.height*0.9}" prefWidth="300" focusTraversable="true">
             <padding>
-                <Insets bottom="30" top="30" left="20" right="20"/>
+                <Insets bottom="30" left="20" right="20" top="30" />
             </padding>
 
-            <VBox prefHeight="${form_login.height*0.9}" styleClass="pane-login-form"  spacing="25" alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="${form_login.height*0.9}" spacing="25">
                 <padding>
-                    <Insets left="20" right="20"/>
+                    <Insets left="20" right="20" />
                 </padding>
 
                 <Label text="Login" textFill="#ffffff">
                     <font>
-                        <Font size="30"/>
+                        <Font size="30" />
                     </font>
                 </Label>
 
-                <TextField fx:id="textUName" styleClass="text-field" promptText="Username"/>
-                <PasswordField fx:id="textPasswd" styleClass="text-field" promptText="Password"/>
+                <TextField fx:id="textUName" promptText="Username" styleClass="text-field">
+                    <padding>
+                        <Insets top="10" left="10" right="10" bottom="10"/>
+                    </padding>
+                </TextField>
+                <PasswordField fx:id="textPasswd" promptText="Password" styleClass="text-field">
+                    <padding>
+                        <Insets top="10" left="10" right="10" bottom="10"/>
+                    </padding>
+                </PasswordField>
+                <Button fx:id="buttonLogin" text="Submit" prefWidth="${form_login.height*0.9}" styleClass="button-submit">
+                    <padding>
+                        <Insets top="10" left="10" right="10" bottom="10"/>
+                    </padding>
+                </Button>
+
+                <HBox>
+                    <Label textFill="white" text="Don't have an account ? "/>
+                    <Label textFill="white" text="Sign up here" styleClass="hover-hand-cursor" underline="true">
+                    </Label>
+                </HBox>
+            <styleClass>
+               <String fx:value="pane-login-form" />
+               <String fx:value="shadow-on-background" />
+            </styleClass>
             </VBox>
 
-            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.1}"/>
+            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.1}" />
 
 
         </VBox>
