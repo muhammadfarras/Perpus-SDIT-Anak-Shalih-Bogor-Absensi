@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<StackPane fx:id="root" minHeight="900.0" minWidth="1200.0" stylesheets="@../../../../style/dashboard-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MainController">
+    <styleClass>
+        <String fx:value="background-root" />
+    </styleClass>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <VBox fx:id="lefttab" maxWidth="200" spacing="10" StackPane.alignment="CENTER_LEFT">
+        <styleClass>
+            <String fx:value="left_tab" />
+        </styleClass>
+        <padding>
+            <Insets left="10" top="80" />
+        </padding>
+        <Label text="test 1" />
+        <Label text="test 2" />
+        <Label text="test 3" />
+    </VBox>
+<!--hgap="10"-->
+
+    <HBox fx:id="upptab" maxHeight="50" StackPane.alignment="TOP_CENTER" >
+        <!-- Navgation Bar (Left Side) -->
+        <HBox alignment="CENTER_LEFT" prefWidth="${upptab.width/2}" spacing="105">
+            <ImageView fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/icon-ourbry.png" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                <image>
+                    <Image url="@../../../../image/dash-icon-32.png" />
+                </image>
+            </ImageView>
+        </HBox>
+        <!-- Navigation Bar (Righ Side) -->
+        <HBox alignment="CENTER_RIGHT" prefWidth="${upptab.width/2}" style="-fx-background-color: blue;">
+            <ImageView fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/icon-ourbry.png" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                <image>
+                    <Image url="@../../../../image/dash-icon-32.png" />
+                </image>
+            </ImageView>
+            <padding>
+                <Insets right="20"/>
+            </padding>
+        </HBox>
+
+        <styleClass>
+            <String fx:value="upper_tab" />
+        </styleClass>
+
+
+    </HBox>
+
+</StackPane>

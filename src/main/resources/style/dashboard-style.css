@@ -1,0 +1,15 @@
+.upper_tab {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 10, 0, 0, 0);
+    -fx-background-color: "#e8fff7";
+    -fx-padding: 0 0 0 10;
+}
+
+.left_tab{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 5, 0, 0, 0);
+
+}
+
+.background-root {
+    -fx-background-color: "#ebebeb";
+}
