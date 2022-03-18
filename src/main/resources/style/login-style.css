@@ -1,0 +1,41 @@
+
+.border-right-bottom-radius {
+    -fx-border-radius: 0 50 50 0;
+    -fx-background-radius: 0 50 50 0;
+    -fx-background-color: "#b5ebe6";
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+.text-field:focused {
+    -fx-focus-color: "#dddbff";
+    -fx-background-color: "#dddbff" ;
+}
+
+.button-submit {
+    -fx-background-color: "#b5ebe6";
+    -fx-background-radius: 10 ;
+}
+
+.button-submit:hover {
+    -fx-cursor: hand;
+    -fx-background-color: "#daf7f5";
+}
+
+.hover-hand-cursor {
+    -fx-cursor: hand;
+}
+
+.pane-login-form {
+    -fx-background-color: "#04004a";
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius:  10 10 10 10;
+}
+
+.shadow-on-background {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 14, 0, 0, 0);
+}

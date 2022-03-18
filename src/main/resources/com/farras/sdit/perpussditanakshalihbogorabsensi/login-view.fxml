@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import impl.org.controlsfx.skin.DecorationPane?>
+<StackPane prefHeight="600.0" prefWidth="600.0" stylesheets="@../../../../style/login-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.LoginController">
+    <HBox prefHeight="100.0" prefWidth="600.0" style="-fx-background-color:#fffafa">
+        <VBox fx:id="hroot" prefWidth="300">
+
+            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.9}" prefWidth="100">
+
+                <styleClass>
+                    <String fx:value="border-right-top-radius" />
+                    <String fx:value="border-right-bottom-radius" />
+                </styleClass>
+
+                <padding>
+                    <Insets left="10" />
+                </padding>
+                <Label fx:id="vbox_front" text="|OURBRY">
+                    <font>
+                        <Font size="56.0" />
+                    </font>
+                </Label>
+                <Label fx:id="app_version" text="Our Library, version 1.0" textFill="dimgray">
+                    <font>
+                        <Font size="10" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.1}">
+                <padding>
+                    <Insets left="30">
+
+                    </Insets>
+                </padding>
+                <Label fx:id="my_credit" text="%developer_identity">
+                   <font>
+                      <Font name="System Italic" size="9.0" />
+                   </font>
+                </Label>
+                <Label text="Perpustakaan SDIT Anak Shalih Bogor" textFill="#08983a">
+                    <font>
+                        <Font name="System Bold Italic" size="9.0" />
+                    </font>
+                </Label>
+            </VBox>
+        </VBox>
+
+
+        <VBox fx:id="form_login" prefHeight="${hroot.height*0.9}" prefWidth="300" focusTraversable="true">
+            <padding>
+                <Insets bottom="30" left="20" right="20" top="30" />
+            </padding>
+
+            <VBox alignment="CENTER" prefHeight="${form_login.height*0.9}" spacing="25">
+                <padding>
+                    <Insets left="20" right="20" />
+                </padding>
+
+                <Label text="Login" textFill="#ffffff">
+                    <font>
+                        <Font size="30" />
+                    </font>
+                </Label>
+
+                <TextField fx:id="textUName" promptText="Username" styleClass="text-field">
+                    <padding>
+                        <Insets top="10" left="10" right="10" bottom="10"/>
+                    </padding>
+                </TextField>
+                <PasswordField fx:id="textPasswd" promptText="Password" styleClass="text-field">
+                    <padding>
+                        <Insets top="10" left="10" right="10" bottom="10"/>
+                    </padding>
+                </PasswordField>
+                <Button fx:id="buttonLogin" text="Submit" prefWidth="${form_login.height*0.9}" styleClass="button-submit">
+                    <padding>
+                        <Insets top="10" left="10" right="10" bottom="10"/>
+                    </padding>
+                </Button>
+
+                <HBox>
+                    <Label textFill="white" text="Don't have an account ? "/>
+                    <Label textFill="white" text="Sign up here" styleClass="hover-hand-cursor" underline="true">
+                    </Label>
+                </HBox>
+            <styleClass>
+               <String fx:value="pane-login-form" />
+               <String fx:value="shadow-on-background" />
+            </styleClass>
+            </VBox>
+
+            <VBox alignment="CENTER_LEFT" prefHeight="${hroot.height*0.1}" />
+
+
+        </VBox>
+    </HBox>
+
+
+</StackPane>
