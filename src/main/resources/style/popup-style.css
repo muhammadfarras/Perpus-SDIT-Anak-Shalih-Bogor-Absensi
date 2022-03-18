@@ -1,0 +1,20 @@
+.alert-text {
+    -fx-background-color: "#ff4754";
+    -fx-background-radius: 5 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 14, 0, 0, 0);
+}
+.success-text {
+    -fx-background-color: "#48d990";
+    -fx-background-radius: 5 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 14, 0, 0, 0);
+}
+.warning-text {
+    -fx-background-color: "#fff759";
+    -fx-background-radius: 5 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 14, 0, 0, 0);
+}
+.info-text {
+    -fx-background-color: "#54aaff";
+    -fx-background-radius: 5 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 14, 0, 0, 0);
+}
