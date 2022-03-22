@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.lang.String?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<StackPane prefWidth="600.0"
+           xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+           stylesheets="@../../../../style/management-member-style.css"
+           fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MemberStudentController"
+           focusTraversable="true">
+
+   <VBox spacing="15">
+      <HBox alignment="CENTER_LEFT">
+         <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../image/group.png" />
+            </image>
+         </ImageView>
+         <Label text="Member Management">
+            <padding>
+               <Insets left="5"/>
+            </padding>
+         </Label>
+         <Label text=" / "/>
+         <Label text="Student"/>
+      </HBox>
+
+      <Label text="Label"/>
+      <HBox alignment="CENTER_LEFT" spacing="10">
+         <TextField prefHeight="30" styleClass="find-text-field" HBox.hgrow="ALWAYS" maxWidth="Infinity" promptText="Find user"/>
+         <Button prefHeight="30" styleClass="find-button-submit" prefWidth="80" text="test"/>
+      </HBox>
+
+
+
+   </VBox>
+
+
+   <Button styleClass="add_anggota_button" StackPane.alignment="TOP_RIGHT" fx:id="add_anggota" text="%add_member">
+      <graphic>
+         <ImageView fitHeight="20"
+                    fitWidth="20" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../../image/add-user.png"/>
+         </ImageView>
+      </graphic>
+   </Button>
+
+
+
+   <styleClass>
+      <String fx:value="parent"/>
+   </styleClass>
+   <VBox.margin>
+      <Insets right="30"/>
+   </VBox.margin>
+
+</StackPane>

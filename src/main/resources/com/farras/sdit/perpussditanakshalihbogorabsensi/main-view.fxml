@@ -6,25 +6,226 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.shape.Line?>
 <StackPane fx:id="root" minHeight="900.0" minWidth="1200.0" stylesheets="@../../../../style/dashboard-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MainController">
-    <styleClass>
-        <String fx:value="background-root" />
-    </styleClass>
+    <VBox fx:id="main_form" styleClass="background-root">
+        <padding>
+            <Insets left="270" top="80"/>
+        </padding>
+    </VBox>
 
-    <VBox fx:id="lefttab" maxWidth="200" spacing="10" StackPane.alignment="CENTER_LEFT">
+    <VBox fx:id="lefttab" maxWidth="250" StackPane.alignment="CENTER_LEFT">
         <styleClass>
             <String fx:value="left_tab" />
         </styleClass>
         <padding>
-            <Insets left="10" top="80" />
+            <Insets top="80" />
         </padding>
-        <Label text="test 1" />
-        <Label text="test 2" />
-        <Label text="test 3" />
+
+        <!-- DASHBOARD VIEW -->
+        <HBox alignment="CENTER" spacing="5">
+            <padding>
+                <Insets left="%css-margin-left-header"/>
+            </padding>
+            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/dashboard.png" />
+                </image>
+            </ImageView>
+            <Label prefWidth="${lefttab.width}" text="%dashboard" >
+                <styleClass>
+                    <String fx:value="parent-sub"/>
+                </styleClass>
+            </Label>
+        </HBox>
+
+
+        <HBox>
+            <VBox alignment="CENTER">
+                <Line fx:id="line_db" layoutY="0" styleClass="line-sub-header">
+                    <VBox.margin>
+                        <Insets left="%css-margin-left-children"/>
+                    </VBox.margin>
+                </Line>
+            </VBox>
+
+          <VBox fx:id="dashboard_child">
+              <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%dashboard-navleftbar-visitors">
+                  <VBox.margin>
+                      <Insets right="%css-margin-left-children"/>
+                  </VBox.margin>
+                  <styleClass>
+                      <String fx:value="menu-left-bar"/>
+                  </styleClass>
+              </Label>
+              <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%dashboard-navleftbar-book-status">
+                  <VBox.margin>
+                      <Insets right="%css-margin-left-children"/>
+                  </VBox.margin>
+                  <styleClass>
+                      <String fx:value="menu-left-bar"/>
+                  </styleClass>
+              </Label>
+          </VBox>
+        </HBox>
+
+        <!-- ENROLLMENT VIEW -->
+        <HBox spacing="5" alignment="CENTER">
+            <padding>
+                <Insets top="5" bottom="5" left="%css-margin-left-header"/>
+            </padding>
+            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/group.png" />
+                </image>
+            </ImageView>
+            <Label prefWidth="${lefttab.width}" text="%member_management" >
+                <styleClass>
+                    <String fx:value="parent-sub"/>
+                </styleClass>
+            </Label>
+        </HBox>
+
+        <HBox>
+            <VBox alignment="CENTER">
+                <Line fx:id="line_db_enrollment" layoutY="0" styleClass="line-sub-header">
+                    <VBox.margin>
+                        <Insets left="%css-margin-left-children"/>
+                    </VBox.margin>
+                </Line>
+            </VBox>
+
+            <VBox fx:id="dashboard_child_enrollment">
+                <Label fx:id="enrollment_student" prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%mm_student">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+                <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%mm_teacher">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+                <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="Edit">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+            </VBox>
+        </HBox>
+
+
+        <!-- BOOK VIEW -->
+        <HBox spacing="5" alignment="CENTER">
+            <padding>
+                <Insets top="5" bottom="5" left="%css-margin-left-header"/>
+            </padding>
+            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/books.png" />
+                </image>
+            </ImageView>
+            <Label prefWidth="${lefttab.width}" text="%book_organizing" >
+                <styleClass>
+                    <String fx:value="parent-sub"/>
+                </styleClass>
+            </Label>
+        </HBox>
+        <HBox>
+            <VBox alignment="CENTER">
+                <Line fx:id="line_db_book" layoutY="0" styleClass="line-sub-header">
+                    <VBox.margin>
+                        <Insets left="%css-margin-left-children"/>
+                    </VBox.margin>
+                </Line>
+            </VBox>
+
+            <VBox fx:id="dashboard_child_book">
+                <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%bo_author">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+                <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%bo_publisher">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+                <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%bo_books">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+            </VBox>
+        </HBox>
+
+        <!-- HELP AND ABOUT VIEW -->
+        <HBox spacing="5" alignment="CENTER">
+            <padding>
+                <Insets top="5" bottom="5" left="%css-margin-left-header"/>
+            </padding>
+            <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/help.png" />
+                </image>
+            </ImageView>
+            <Label prefWidth="${lefttab.width}" text="%book_organizing" >
+                <styleClass>
+                    <String fx:value="parent-sub"/>
+                </styleClass>
+            </Label>
+        </HBox>
+        <HBox>
+            <VBox alignment="CENTER">
+                <Line fx:id="line_db_haa" layoutY="0" styleClass="line-sub-header">
+                    <VBox.margin>
+                        <Insets left="%css-margin-left-children"/>
+                    </VBox.margin>
+                </Line>
+            </VBox>
+
+            <VBox fx:id="dashboard_child_haa">
+                <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%haa_faq">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+                <Label prefWidth="${lefttab.width}" styleClass="menu-left-bar" text="%haa_about">
+                    <VBox.margin>
+                        <Insets right="%css-margin-left-children"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="menu-left-bar"/>
+                    </styleClass>
+                </Label>
+            </VBox>
+        </HBox>
+
     </VBox>
 <!--hgap="10"-->
 
-    <HBox fx:id="upptab" maxHeight="50" StackPane.alignment="TOP_CENTER" >
+    <HBox fx:id="upptab" maxHeight="50" StackPane.alignment="TOP_CENTER">
         <!-- Navgation Bar (Left Side) -->
         <HBox alignment="CENTER_LEFT" prefWidth="${upptab.width/2}" spacing="105">
             <ImageView fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
@@ -39,7 +240,7 @@
             </ImageView>
         </HBox>
         <!-- Navigation Bar (Righ Side) -->
-        <HBox alignment="CENTER_RIGHT" prefWidth="${upptab.width/2}" style="-fx-background-color: blue;">
+        <HBox alignment="CENTER_RIGHT" prefWidth="${upptab.width/2}">
             <ImageView fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@../../../../image/icon-ourbry.png" />
@@ -51,15 +252,12 @@
                 </image>
             </ImageView>
             <padding>
-                <Insets right="20"/>
+                <Insets right="20" />
             </padding>
         </HBox>
 
         <styleClass>
             <String fx:value="upper_tab" />
         </styleClass>
-
-
     </HBox>
-
 </StackPane>

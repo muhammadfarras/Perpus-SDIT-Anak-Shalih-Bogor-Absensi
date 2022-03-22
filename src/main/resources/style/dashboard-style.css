@@ -13,3 +13,25 @@
 .background-root {
     -fx-background-color: "#ebebeb";
 }
+.menu-left-bar {
+    -fx-padding: 8 0 8 10;
+    -fx-font-size: 10pt ;
+}
+
+.menu-left-bar:hover {
+    -fx-cursor: hand;
+    -fx-background-radius: 10 ;
+    -fx-background-color: "#e8fff7";
+}
+
+.parent-sub {
+    -fx-font-size: 10pt ;
+    -fx-font-weight: bold;
+}
+
+
+
+.line-sub-header {
+    -fx-stroke: "#b5ebe6";
+    -fx-stroke-width: 2px;
+}

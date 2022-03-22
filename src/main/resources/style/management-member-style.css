@@ -1,0 +1,37 @@
+.parent {
+    -fx-padding: 10 10 10 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 10, 0, 0, 0);
+    -fx-background-color:white;
+}
+
+.add_anggota_button {
+    -fx-background-color: white;
+    -fx-background-radius: 4 ;
+}
+
+.add_anggota_button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(94, 255, 199, 0.9), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+
+.find-button-submit {
+    -fx-background-color: "#b5ebe6";
+    -fx-background-radius: 10 ;
+}
+
+.find-button-submit:hover {
+    -fx-cursor: hand;
+    -fx-background-color: "#daf7f5";
+}
+
+.find-text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+.find-text-field:focused {
+    -fx-focus-color: "#dddbff";
+    -fx-background-color: "#dddbff" ;
+}

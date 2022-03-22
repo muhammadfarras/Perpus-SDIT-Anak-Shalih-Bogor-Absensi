@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.String?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.EnrollmentController" spacing="10">
+
+    <Label text="Nama Siswa" />
+    <TextField fx:id="member_name" promptText="Nama Siswa" />
+
+    <Label text="Nomor Induk Siswa" />
+    <TextField fx:id="member_id" promptText="Nomor Induk Siswa" />
+
+    <Label text="Jenis Kelamin" />
+    <ChoiceBox fx:id="member_gender" accessibleRole="CHECK_MENU_ITEM" prefWidth="150.0">
+        <String fx:value="Ikhwan"/>
+        <String fx:value="Akhwat"/>
+    </ChoiceBox>
+    <Button fx:id="button_enrollment" text="daftar"/>
+    <padding>
+        <Insets left="10" top="10" />
+    </padding>
+</VBox>

@@ -23,6 +23,7 @@ public class LoginApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         LoginController controller = (LoginController)fxmlLoader.getController();
 
+
         stage.initStyle(StageStyle.UNDECORATED); // remove decorated stage
         stage.setTitle(resourceBundle.getString("text-login-page"));
         controller.AllowdUndecoratedStageMove(scene,stage); // Move undecorated stage {Lebih indah gak gerak2}
