@@ -64,7 +64,7 @@ public class LoginController implements Initializable {
             }
             else {
                 // Is username and password are existing in Data base
-                if (uname.equals("farras") & passwd.equals("farras2712")){
+                if (uname.equals("farras") & passwd.equals("qwerty")){
                     loginStage.close(); // close current stage
 
                     try {

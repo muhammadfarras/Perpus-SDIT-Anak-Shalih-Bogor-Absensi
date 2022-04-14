@@ -7,7 +7,9 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.shape.Line?>
-<StackPane fx:id="root" minHeight="900.0" minWidth="1200.0" stylesheets="@../../../../style/dashboard-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MainController">
+<StackPane fx:id="root" minHeight="900.0" minWidth="1200.0"
+           stylesheets="@../../../../style/dashboard-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MainController">
     <VBox fx:id="main_form" styleClass="background-root">
         <padding>
             <Insets left="270" top="80"/>
