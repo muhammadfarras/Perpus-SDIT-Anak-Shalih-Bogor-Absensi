@@ -1,0 +1,37 @@
+.upper_tab {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 10, 0, 0, 0);
+    -fx-background-color: "#e8fff7";
+    -fx-padding: 0 0 0 10;
+}
+
+.left_tab{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 5, 0, 0, 0);
+
+}
+
+.background-root {
+    -fx-background-color: "#ebebeb";
+}
+.menu-left-bar {
+    -fx-padding: 8 0 8 10;
+    -fx-font-size: 10pt ;
+}
+
+.menu-left-bar:hover {
+    -fx-cursor: hand;
+    -fx-background-radius: 10 ;
+    -fx-background-color: "#e8fff7";
+}
+
+.parent-sub {
+    -fx-font-size: 10pt ;
+    -fx-font-weight: bold;
+}
+
+
+
+.line-sub-header {
+    -fx-stroke: "#b5ebe6";
+    -fx-stroke-width: 2px;
+}

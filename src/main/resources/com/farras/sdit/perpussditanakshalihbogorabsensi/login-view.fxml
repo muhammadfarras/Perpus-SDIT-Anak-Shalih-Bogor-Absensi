@@ -4,10 +4,11 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<?import impl.org.controlsfx.skin.DecorationPane?>
-<StackPane prefHeight="600.0" prefWidth="600.0" stylesheets="@../../../../style/login-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.LoginController">
+<StackPane prefHeight="600.0" prefWidth="600.0" stylesheets="@../../../../style/login-style.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.LoginController">
     <HBox prefHeight="100.0" prefWidth="600.0" style="-fx-background-color:#fffafa">
         <VBox fx:id="hroot" prefWidth="300">
 
@@ -53,7 +54,7 @@
         </VBox>
 
 
-        <VBox fx:id="form_login" prefHeight="${hroot.height*0.9}" prefWidth="300" focusTraversable="true">
+        <VBox fx:id="form_login" focusTraversable="true" prefHeight="${hroot.height*0.9}" prefWidth="300">
             <padding>
                 <Insets bottom="30" left="20" right="20" top="30" />
             </padding>
@@ -71,23 +72,23 @@
 
                 <TextField fx:id="textUName" promptText="Username" styleClass="text-field">
                     <padding>
-                        <Insets top="10" left="10" right="10" bottom="10"/>
+                        <Insets bottom="10" left="10" right="10" top="10" />
                     </padding>
                 </TextField>
                 <PasswordField fx:id="textPasswd" promptText="Password" styleClass="text-field">
                     <padding>
-                        <Insets top="10" left="10" right="10" bottom="10"/>
+                        <Insets bottom="10" left="10" right="10" top="10" />
                     </padding>
                 </PasswordField>
-                <Button fx:id="buttonLogin" text="Submit" prefWidth="${form_login.height*0.9}" styleClass="button-submit">
+                <Button fx:id="buttonLogin" prefWidth="${form_login.height*0.9}" styleClass="button-submit" text="Submit">
                     <padding>
-                        <Insets top="10" left="10" right="10" bottom="10"/>
+                        <Insets bottom="10" left="10" right="10" top="10" />
                     </padding>
                 </Button>
 
                 <HBox>
-                    <Label textFill="white" text="Don't have an account ? "/>
-                    <Label textFill="white" text="Sign up here" styleClass="hover-hand-cursor" underline="true">
+                    <Label text="Don't have an account ? " textFill="white" />
+                    <Label styleClass="hover-hand-cursor" text="Sign up here" textFill="white" underline="true">
                     </Label>
                 </HBox>
             <styleClass>

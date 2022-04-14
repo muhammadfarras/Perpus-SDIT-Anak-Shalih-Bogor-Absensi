@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<StackPane prefHeight="600.0" prefWidth="600.0" stylesheets="@../../../../style/enrollment-view-style.css"
+           xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.farras.sdit.perpussditanakshalihbogorabsensi.controller.EnrollmentController">
+
+    <VBox prefHeight="500" spacing="10" styleClass="form_enrollment" StackPane.alignment="CENTER">
+        <Label text="%enrollment_text_field_username_student" />
+        <TextField fx:id="member_name" promptText="%enrollment_text_field_username_student" styleClass="text-field" />
+
+        <Label text="%enrollment_text_field_id_student" />
+        <TextField fx:id="member_id" promptText="%enrollment_text_field_id_student" styleClass="text-field" />
+
+        <Label text="%enrollment_choice_box_gender_student" />
+        <ChoiceBox fx:id="member_gender" accessibleRole="CHECK_MENU_ITEM" prefWidth="150.0" maxWidth="Infinity">
+            <String fx:value="Ikhwan" />
+            <String fx:value="Akhwat" />
+        </ChoiceBox>
+
+        <!-- Check box to make sure is the user rady to capture the fingerprint -->
+        <HBox fx:id="hbox_checker_enrollment" visible="false" spacing="10">
+            <Label fx:id="status_ready_capture_finger"/>
+            <CheckBox fx:id="checkbox_enrollment_is_ready"/>
+        </HBox>
+
+        <!-- image status for captured finger print -->
+        <HBox alignment="CENTER">
+         <children>
+             <ImageView fx:id="first_image_finger_print" fitHeight="150.0" fitWidth="200.0" opacity="0.3"
+                        pickOnBounds="true" preserveRatio="true">
+                 <Image url="@../../../../image/fingerprint-empty.png"/>
+             </ImageView>
+             <ImageView fx:id="second_image_finger_print" fitHeight="150.0" fitWidth="200.0" opacity="0.3"
+                        pickOnBounds="true" preserveRatio="true">
+                 <Image url="@../../../../image/fingerprint-empty.png"/>
+             </ImageView>
+         </children>
+        </HBox>
+
+        <Label styleClass="status_enrolllment" maxWidth="Infinity" fx:id="enrollment_status" text="Test">
+            <textFill>
+                <Color fx:value="#00e0dd"/>
+            </textFill>
+            <padding>
+                <Insets top="6" bottom="6"/>
+            </padding>
+        </Label>
+
+        <!-- button to sent data to server to save credential -->
+        <Button maxWidth="Infinity" fx:id="button_enrollment" text="daftar" />
+
+        <HBox.margin>
+            <Insets top="80" />
+        </HBox.margin>
+        <padding>
+            <Insets left="20" right="20" top="10" />
+        </padding>
+    </VBox>
+
+
+    <HBox alignment="CENTER_RIGHT" maxHeight="20" maxWidth="200" StackPane.alignment="TOP_RIGHT">
+        <Label text="%reader_status">
+
+        </Label>
+        <Circle fx:id="circle_reader_status" fill="GRAY" radius="6.0" stroke="GRAY" strokeType="INSIDE" />
+        <StackPane.margin>
+            <Insets right="10"/>
+        </StackPane.margin>
+    </HBox>
+
+</StackPane>

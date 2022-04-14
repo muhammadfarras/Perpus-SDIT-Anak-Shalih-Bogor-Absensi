@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
@@ -63,7 +64,7 @@ public class LoginController implements Initializable {
             }
             else {
                 // Is username and password are existing in Data base
-                if (uname.equals("farras") & passwd.equals("farras2712")){
+                if (uname.equals("farras") & passwd.equals("qwerty")){
                     loginStage.close(); // close current stage
 
                     try {
