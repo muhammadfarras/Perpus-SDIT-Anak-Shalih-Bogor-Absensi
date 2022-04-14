@@ -3,13 +3,20 @@ package com.farras.sdit.perpussditanakshalihbogorabsensi;
 
 import com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MainController;
 import com.farras.sdit.perpussditanakshalihbogorabsensi.controller.MemberStudentController;
+import com.farras.sdit.perpussditanakshalihbogorabsensi.utils.OurBryConfiguration;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -49,6 +56,8 @@ public class MainApplication extends Application {
         mainStage.setTitle(myBundle.getString("application_name"));
         mainStage.setScene(scene);
         mainStage.show();
+
+
     }
 
     public Stage getParentStage(){

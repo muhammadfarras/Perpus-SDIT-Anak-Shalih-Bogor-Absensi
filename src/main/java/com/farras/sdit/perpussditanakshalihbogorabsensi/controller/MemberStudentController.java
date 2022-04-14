@@ -3,9 +3,8 @@ package com.farras.sdit.perpussditanakshalihbogorabsensi.controller;
 import com.farras.sdit.perpussditanakshalihbogorabsensi.EnrollmentApplication;
 import com.farras.sdit.perpussditanakshalihbogorabsensi.data_model.Students;
 import com.farras.sdit.perpussditanakshalihbogorabsensi.data_model_api.StudentMembersApi;
+import com.farras.sdit.perpussditanakshalihbogorabsensi.utils.OurBryConfiguration;
 import com.google.gson.Gson;
-import javafx.beans.DefaultProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -69,6 +68,8 @@ public class MemberStudentController implements Initializable {
 
         });
 
+        // GET CONFIG XML
+        OurBryConfiguration ourBryConfiguration = new OurBryConfiguration();
 
         // Ambil semua data dari API OUrBry
         OkHttpClient client = new OkHttpClient().newBuilder()
@@ -76,9 +77,9 @@ public class MemberStudentController implements Initializable {
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         RequestBody body = RequestBody.create(JSON, "{}");
         Request request = new Request.Builder()
-                .url("http://localhost:8000/api/get-all-member/?format=json")
+                .url(ourBryConfiguration.getFetchAllDataStudentFP())
                 .method("POST", body)
-                .addHeader("Authorization", "Token 41281b4a66cc21fe66abf4e14c1404a59a0aca36")
+                .addHeader("Authorization", ourBryConfiguration.getTokenOurBry())
                 .build();
         try {
             Response response = client.newCall(request).execute();
