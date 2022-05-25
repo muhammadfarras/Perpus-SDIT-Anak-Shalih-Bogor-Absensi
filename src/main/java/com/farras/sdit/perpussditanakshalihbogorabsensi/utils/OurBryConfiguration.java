@@ -13,7 +13,8 @@ import java.io.IOException;
 public class OurBryConfiguration {
     protected Element rootElement;
     public OurBryConfiguration(){
-        File file = new File("src/main/java/com/farras/sdit/perpussditanakshalihbogorabsensi/configurations/config.xml");
+//        File file = new File("src/main/java/com/farras/sdit/perpussditanakshalihbogorabsensi/configurations/config.xml");
+        File file = new File("config.xml");
 
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 

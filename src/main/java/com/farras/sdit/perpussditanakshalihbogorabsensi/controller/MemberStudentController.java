@@ -20,8 +20,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MemberStudentController implements Initializable {
+public class MemberStudentController implements Initializable, Runnable {
     private EnrollmentApplication enrollmentApplication;
+
+    private volatile ObservableList<Students>  dataStudents;
 
 
     @FXML
@@ -68,6 +70,22 @@ public class MemberStudentController implements Initializable {
 
         });
 
+        MemberStudentController memberStudentController = new MemberStudentController();
+
+        Thread thread = new Thread(memberStudentController);
+        thread.start();
+        try {
+            // Menunggg thread sampai dapat datanya dari OurBry server
+            thread.join();
+            this.table_member_students.setItems(memberStudentController.getDataStudents());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public void run() {
         // GET CONFIG XML
         OurBryConfiguration ourBryConfiguration = new OurBryConfiguration();
 
@@ -101,8 +119,7 @@ public class MemberStudentController implements Initializable {
                 }
 
                 // assign data terformat kedalam observablelist untuk tabel
-                final ObservableList<Students> data = FXCollections.observableArrayList(students);
-                table_member_students.setItems(data);
+                dataStudents = FXCollections.observableArrayList(students);
             }
             else {
                 System.out.println("Tampilkan pesan server tidak dapat memuat data");
@@ -112,7 +129,9 @@ public class MemberStudentController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
-
+    public ObservableList<Students> getDataStudents(){
+        return this.dataStudents;
     }
 }

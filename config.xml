@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <token>
+        <ourbry-api xml:id="token">
+            Token 41281b4a66cc21fe66abf4e14c1404a59a0aca36
+        </ourbry-api>
+    </token>
+    <api>
+        <base-url xml:id="base-url">
+            http://localhost:8000
+        </base-url>
+        <get-all-data xml:id="fetch-all-data">
+            /api/get-all-member/?format=json
+        </get-all-data>
+    </api>
+</config>
